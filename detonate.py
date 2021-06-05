@@ -33,10 +33,6 @@ def detectDetonation():
             break
         
 mc = minecraft.Minecraft.create()
-mc.setBlocks(X-C_WIDTH, Y-1, Z, X+C_WIDTH, Y+3*C_HEIGHT, Z+2*C_WIDTH, block.AIR.id)
-"""
 buildCastle()
 setExplosives()
-detectDetonation()"""
-
-
+detectDetonation()
