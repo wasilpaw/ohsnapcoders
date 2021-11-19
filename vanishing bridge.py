@@ -13,23 +13,15 @@ treasure_z = None
 
 mc = minecraft.Minecraft.create()
 
-def placeTreasure():
-    treasure_x = random.randint(X,X+RANGE)
-    treasure_y = random.randint(Y,Y+RANGE)
-    treasure_z = random.randint(Z,Z+RANGE)
-    mc.setBlock(treasure_x, treasure_y, treasure_z, block.DIAMOND_BLOCK.id)
-
-placeTreasure()
-
-#while True:
-    #pos = mc.player.getTilePos()
-    #b = mc.getBlock(pos.x, pos.y-1, pos.z)
-    #c = random.randint(0,15)
-    #if b == block.AIR.id or b == block.WATER_STATIONARY.id or b == block.WATER_FLOWING.id:
-    #    mc.setBlock(pos.x, pos.y-1, pos.z, block.WOOL.id, c)
-     #   coordinate = [pos.x, pos.y-1, pos.z]
-    #    bridge.append(coordinate)
-    #elif b!= block.WOOL.id and len(bridge) > 0 :
-    #    coordinate = bridge.pop()
-    #    mc.setBlock(coordinate[0], coordinate[1], coordinate[2], block.AIR.id)
-     #   time.sleep(0.25)
+while True:
+    pos = mc.player.getTilePos()
+    b = mc.getBlock(pos.x, pos.y-1, pos.z)
+    c = random.randint(0,15)
+    if b == block.AIR.id or b == block.WATER_STATIONARY.id or b == block.WATER_FLOWING.id:
+        mc.setBlock(pos.x, pos.y-1, pos.z, block.WOOL.id, c)
+        coordinate = [pos.x, pos.y-1, pos.z]
+        bridge.append(coordinate)
+    elif b!= block.WOOL.id and len(bridge) > 0 :
+        coordinate = bridge.pop()
+        mc.setBlock(coordinate[0], coordinate[1], coordinate[2], block.AIR.id)
+        time.sleep(0.25)
