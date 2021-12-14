@@ -66,8 +66,8 @@ def PlayerGreenMove():
             #only allow to change the colour to the player's one if not already allocated
             if GetBrickColour(e.pos.x, e.pos.y, e.pos.z) == NEUTRAL:
                 SetBrickColour(e.pos.x, e.pos.y,GREEN)
+                DisplayBoard()
                 return
-
 
 def DidPlayerRedWin():
     return False
@@ -76,40 +76,23 @@ def PlayerRedMove():
     pass
 
 mc.player.setTilePos(X+2, Y-1, Z-3)
-DisplayBoard()
 PlayerGreenMove()   #1
-DisplayBoard()
-PlayerRedMove()   #2
-DisplayBoard()
+PlayerRedMove()     #2
 PlayerGreenMove()   #3
-DisplayBoard()
-PlayerRedMove()  #4
-DisplayBoard()
+PlayerRedMove()     #4
 PlayerGreenMove()   #5
-DisplayBoard()
-if DidPlayerGreenWin()==True:
-    mc.postToChat("Player1 won!")
+if DidPlayerGreenWin()==True:   #start checking if a player won only after her third move
     exit()
-PlayerRedMove()   #6
-DisplayBoard()
+PlayerRedMove()     #6
 if DidPlayerRedWin()==True:
-     mc.postToChat("Player2 won!")
      exit()
 PlayerGreenMove()   #7
-DisplayBoard()
 if DidPlayerGreenWin()==True:
-    mc.postToChat("Player1 won!")
     exit()
-PlayerRedMove() #8
-DisplayBoard()
+PlayerRedMove()     #8
 if DidPlayerRedWin()==True:
-     mc.postToChat("Player2 won!")
      exit()
 PlayerGreenMove()   #9
-DisplayBoard()
 if DidPlayerGreenWin()==True:
-    mc.postToChat("Player1 won!")
     exit()
 mc.postToChat("It's a draw!")
-
-
