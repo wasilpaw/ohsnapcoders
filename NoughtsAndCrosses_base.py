@@ -76,6 +76,7 @@ def PlayerRedMove():
     pass
 
 mc.player.setTilePos(X+2, Y-1, Z-3)
+DisplayBoard()
 PlayerGreenMove()   #1
 PlayerRedMove()     #2
 PlayerGreenMove()   #3
