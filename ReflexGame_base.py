@@ -12,14 +12,14 @@ DISABLED = 0        # id of the wool colour used for standard blocks
 ENABLED = 10        # id of the wool colour used for the illuminated block
 
 board_row = 0       # the first coordinate of the illuminated block
-board_column = 0    # the second  coordinate of the illuminated block
+board_column = 0    # the second coordinate of the illuminated block
 
 board = [[DISABLED,DISABLED,DISABLED],
          [DISABLED,DISABLED,DISABLED],
          [DISABLED,DISABLED,DISABLED],
          ]
 
-Score = 0.0
+Score = 0.0         # the total score that reflect the total time taken to hit all blocks
 
 def DisplayBoard():
     mc.setBlock(X,Y+2,Z,block.WOOL.id, board[0][0])
@@ -64,6 +64,7 @@ def DisplayFinalScore():
 mc = minecraft.Minecraft.create()
 DisplayBoard()
 mc.player.setTilePos(X+2, Y-1, Z-2)         #teleport the player in front of the board
+
 for i in range(0,10):
     RandomSleep()
     IlluminateBlock()
