@@ -18,6 +18,5 @@ mc.setBlocks(midx-1,y,z, midx+1,y+5,z,block.AIR.id)                     # entran
 mc.setBlocks(x+3,y +SIZE-3,z, midx-3,midy+3,z,block.GLASS.id)           # window 1
 mc.setBlocks(midx+3,y +SIZE-3,z, x + SIZE-3,midy+3,z,block.GLASS.id)    # window 2
 mc.setBlocks(x,y+SIZE-1,z, x + SIZE,y+SIZE,z + SIZE,block.WOOD.id)      # roof
-mc.setBlocks(x+1,y-1,z+1, x + SIZE-2,y-1,z + SIZE-2,block.WOOL.id,14)   # carpet
 
 
