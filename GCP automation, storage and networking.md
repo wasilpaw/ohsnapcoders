@@ -36,9 +36,9 @@ Goal of this project is to simulate GCSC exam setup between schools and a centra
 		nano /exam_results/SchoolNameResults20231021.csv
 		echo "Ada Lovelace,2023-10-21,Computer Science,99," >> Exam_results/SchoolNameResults20231021.csv
 ```
-		2. use ftp client to connect to the central Exam server and upload the file.
-			1. Connect to the FTP server by typing  ftp -p *server_ip* where the ip should be taken from the google console (IPs are ephemeral). -p starts ftp in a passive mode.
-			2. Username and password will be the name of your school.
-			4. Google for ftp command line commands for ubuntu to find out how to upload the files
+8. use ftp client to connect to the central Exam server and upload the file.
+	1. Connect to the FTP server by typing  ftp -p *server_ip* where the ip should be taken from the google console (IPs are ephemeral). -p starts ftp in a passive mode.
+	2. Username and password will be the name of your school.
+	3. Google for ftp command line commands for ubuntu to find out how to upload the files
 
 
