@@ -1,15 +1,4 @@
 sudo apt-get update
-sudo apt install xfce4 xfce4-goodies 
-sudo apt install tightvncserver
-vncserver 
-vncserver -kill :1
-mv ~/.vnc/xstartup ~/.vnc/xstartup.bak
-nano ~/.vnc/xstartup
-
-#!/bin/bash
-xrdb $HOME/.Xresources
-startxfce4 &
-
-chmod +x ~/.vnc/xstartup
-vncserver
-sudo apt install nautilus
+mkdir exam_results
+echo "Student_Name,Date,Course,Result" > exam_results/SchoolNameResults20231021.csv
+echo "Nicola Tesla,2023-10-21,Science,62," >> exam_results/SchoolNameResults20231021.csv
