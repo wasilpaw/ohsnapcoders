@@ -1,3 +1,4 @@
+echo "*** Exam Infra startup script ***"
 sudo apt-get update
 mkdir exam_results
 echo "Student_Name,Date,Course,Result" > exam_results/SchoolNameResults20231021.csv
