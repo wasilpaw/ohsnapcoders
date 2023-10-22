@@ -15,7 +15,7 @@ The goal of this project is to simulate GCSC exam setup between schools and a ce
 	7. ingress 22,990,40000-5000 for SSH connection from outside
 5. Add start up script
 	1. create Google Storage as in  https://cloud.google.com/compute/docs/instances/startup-scripts/linux#passing-storage
-	2. download the script file https://github.com/wasilpaw/ohsnapcoders/blob/main/exam_infra_project and save as a new file with .sh extension (for example ToynbeeInfoScript.sh). The script updates the installed packages and creates a new folder and a file with an example result. We are using here CSV (coma separated values) format which  is one of the most popular format for storing data and could be opened in MS Excel or GSheet.
+	2. download the script file https://github.com/wasilpaw/ohsnapcoders/blob/main/exam_infra_project.sh  and save as a new file with .sh extension (for example ToynbeeInfoScript.sh). The script updates the installed packages and creates a new folder and a file with an example result. We are using here CSV (coma separated values) format which  is one of the most popular format for storing data and could be opened in MS Excel or GSheet.
 		1. Replace the name of the .csv file so that it has your school in its name
 	3. Upload the script to Google Storage bucket
 	4. click on the Create instance button. Fill in the configuration with the same options as previously plus usage of the script as defined in the manual from !) Don't start the process of the creation yet. Instead, find the "Equivalent code" at the bottom to see how the chosen option could used in automation. Remember to cover the following:
